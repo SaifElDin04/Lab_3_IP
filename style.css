@@ -1,0 +1,108 @@
+/* --- GLOBAL --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+}
+
+/* --- CALCULATOR CONTAINER (Glassmorphism) --- */
+.calculator {
+    width: 320px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+}
+
+/* --- DISPLAY --- */
+.display {
+    text-align: right;
+    padding: 20px 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.previous-operand {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.2rem;
+    min-height: 24px;
+}
+
+.current-operand {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* --- KEYPAD GRID --- */
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* --- BUTTONS --- */
+.btn {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    padding: 18px 0;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* Specific Button Colors */
+.operator {
+    background: rgba(255, 153, 0, 0.8);
+    font-weight: bold;
+}
+
+.operator:hover {
+    background: rgba(255, 153, 0, 1);
+}
+
+.clear, .action {
+    background: rgba(255, 69, 58, 0.6);
+}
+
+.clear:hover, .action:hover {
+    background: rgba(255, 69, 58, 0.8);
+}
+
+.equals {
+    background: rgba(48, 209, 88, 0.8);
+}
+
+.equals:hover {
+    background: rgba(48, 209, 88, 1);
+}
+
+.span-two {
+    grid-column: span 2;
+}
